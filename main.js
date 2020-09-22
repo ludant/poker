@@ -36,6 +36,20 @@ function Card(val) {
         return newCard;
     };
 }
+function chanceFlush(cards) {
+    return cards;
+}
+function nCr(n, r) {
+    return factorial(n) / (factorial(r) * factorial(n - r));
+}
+var f = [];
+function factorial(n) {
+    if (n == 0 || n == 1)
+        return 1;
+    if (f[n] > 0)
+        return f[n];
+    return f[n] = factorial(n - 1) * n;
+}
 //init
 var doug = document.querySelector('.hand');
 function drawCard(num) {

@@ -1,6 +1,6 @@
 'use strict';
 
-function $(id) {
+function $(id: string) {
   return document.getElementById(id);
 };
 
@@ -13,7 +13,7 @@ for (let i = 0; i < 52; i++) {
 	deck.push(new Card(i))
 }
 
-function Card(val) {
+function Card(val: number) {
 	this.val = val;
 	this.rank = rank_vals[(val % 13)];
 	this.suit = suit_vals[Math.floor(val / 13)];
@@ -39,6 +39,24 @@ function Card(val) {
 		return newCard;
 	};
 }
+
+function chanceFlush(cards: []) {
+	let draw = 7 - cards.length
+  return 
+}
+
+function nCr(n: number, r: number) {
+	return factorial(n) / (factorial(r) * factorial(n - r));
+}
+
+let f = [];
+function factorial(n) {
+  if (n == 0 || n == 1)
+    return 1;
+  if (f[n] > 0)
+    return f[n];
+  return f[n] = factorial(n-1) * n;
+} 
 
 //init
 let doug = document.querySelector('.hand');
