@@ -2,50 +2,61 @@ html {
   background: #111721;
   color: #c4c8d4;
   font-family: Arial, sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: baseline; }
+  align-items: baseline;
+}
 
 .purple, dfn, a {
-  color: #d179fa; }
+  color: #d179fa;
+}
 
 .input {
   background: #371d4a;
   color: #dfb9e3;
   border-radius: 6px;
   border: 3px outset #641b82;
-  padding: 3px 8px; }
+  padding: 3px 8px;
+}
 
 .hidden {
-  display: none; }
+  display: none;
+}
 
 .monospace {
-  font-family: monospace; }
+  font-family: monospace;
+}
 
 .center {
-  text-align: center; }
+  text-align: center;
+}
 
 .bold {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .invert-color {
   filter: invert(1);
-  opacity: 0.7; }
+  opacity: 0.7;
+}
 
 .no-vertical-padding {
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 0px;
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+}
 
 .hand {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+}
 
 .card {
   background: #ddd;
@@ -57,19 +68,23 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0.5em; }
+  margin: 0.5em;
+}
 
 .suit {
   position: relative;
   bottom: 2px;
-  font-size: 2em; }
+  font-size: 2em;
+}
 
 .red {
-  color: #d22; }
+  color: #d22;
+}
 
 .rank {
   position: relative;
   top: 7px;
-  font-size: 1.3em; }
+  font-size: 1.3em;
+}
 
 /*# sourceMappingURL=main.css.map */

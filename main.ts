@@ -4,9 +4,9 @@ function $(id: string) {
   return document.getElementById(id);
 };
 
-let rank_vals = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-let suit_vals = ['S', 'D', 'C', 'H'];
-let suit_syms = ['♠', '♦', '♣', '♥'];
+const rankVals = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+const suitVals = ['S', 'D', 'C', 'H'];
+const suitSyms = ['♠', '♦', '♣', '♥'];
 
 let deck = []
 for (let i = 0; i < 52; i++) {
@@ -15,9 +15,9 @@ for (let i = 0; i < 52; i++) {
 
 function Card(val: number) {
 	this.val = val;
-	this.rank = rank_vals[(val % 13)];
-	this.suit = suit_vals[Math.floor(val / 13)];
-	this.sym = suit_syms[Math.floor(val / 13)];
+	this.rank = rankVals[(val % 13)];
+	this.suit = suitVals[Math.floor(val / 13)];
+	this.sym = suitSyms[Math.floor(val / 13)];
 	this.red = false;
 	if (this.suit == 'H' || this.suit == 'D') {
 		this.red = true;
@@ -59,9 +59,9 @@ function factorial(n) {
 } 
 
 //init
-let doug = document.querySelector('.hand');
+let hand = document.querySelector('.hand');
 function drawCard(num) {
-	doug.append(deck[num].render());
+	hand.append(deck[num].render());
 }
 for (let i = 0; i < 5; i++) {
 	let num = ~~(Math.random() * 52);
